@@ -22,6 +22,11 @@ const Sidebar = () => {
         {showSidebar ? <AiFillCloseCircle /> : <AiOutlineMenu/>}
 
       </div>
+      {showSidebar && (
+        <div className="xl:w-400 w-20 flex flex-col">
+
+        </div>
+      ) }
     </div>
   )
 }
