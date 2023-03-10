@@ -4,6 +4,9 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import GoogleLogin from 'react-google-login';
 import {AiFillHome, AiOutlineMenu, AiFillCloseCircle} from 'react-icons/ai';
+import Discover from './Discover';
+import SuggestedAccounts from './SuggestedAccounts';
+import Footer from './Footer';
 
 
 const Sidebar = () => {
