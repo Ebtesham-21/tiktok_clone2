@@ -1,6 +1,7 @@
-import type {NextPage} from 'next';
 import axios from 'axios';
-import {Video} from '../types';
+import {Video} from '../../../tiktok_clone/types';
+import VideoCard from '../../components/VideoCard';
+import NoResults from '../../components/NoResults';
 
 interface IProps {
   videos: Video[]
@@ -10,7 +11,15 @@ export default function Home({videos}:IProps) {
   console.log(videos);
 
   return (
-    <h1>Hi</h1>
+    <div className="flex flex-col gap-10 videos h-full">
+      {videos.length ? (
+        videos.map((video: Video) => (
+          <VideoCard post={video} key={video._id}/>
+        ))
+      ) : (
+        <NoResults text={'No Videos'}/>
+      ) }
+    </div>
   
        
       )
